@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after ::before {
+  box-sizing: inherit;
+}
+
+.body {
+  font-family: "Noticia Text", serif;
+  background-color: #4c5c32e8;
+  color: #eee;
+}
+
+.header {
+  margin: 48px auto;
+  width: fit-content;
+  font-size: 70px;
+  text-shadow: 7px 7px 5px #313232;
+  padding: 16px;
+  text-align: center;
+}
