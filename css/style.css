@@ -9,8 +9,16 @@ html {
 
 .body {
   font-family: "Noticia Text", serif;
-  background-color: #4c5c32e8;
   color: #eee;
+}
+
+.background__image {
+  background-color: #eee;
+  background-image: url("../images/backgroung.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
 }
 
 .header {
