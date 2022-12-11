@@ -1,39 +1,53 @@
-console.log("Witam witam, i o zdrowie pytam.");
+{
+  const exchangedAmount = (amount, currency) => {
+    const rateEUR = 4.68078;
+    const rateUSD = 4.44976;
+    const rateJPY = 0.03302;
+    const rateQAR = 1.21497;
+    const rateGBP = 5.4537;
 
-let formElement = document.querySelector(".js-form");
-let ammountElement = document.querySelector(".js-ammount");
-let currencyElement = document.querySelector(".js-currency");
-let formResult = document.querySelector(".js-result");
-let rateEUR = 4.68078;
-let rateUSD = 4.44976;
-let rateJPY = 0.03302;
-let rateQAR = 1.21497;
-let rateGBP = 5.4537;
+    switch (currency) {
+      case "EUR":
+        return amount / rateEUR;
 
-formElement.addEventListener("submit", (event) => {
-  event.preventDefault();
+      case "USD":
+        return amount / rateUSD;
 
-  let ammount = ammountElement.value;
-  let currency = currencyElement.value;
+      case "JPY":
+        return amount / rateJPY;
 
-  let result;
+      case "QAR":
+        return amount / rateQAR;
 
-  switch (currency) {
-    case "EUR":
-      result = ammount / rateEUR;
-      break;
-    case "USD":
-      result = ammount / rateUSD;
-      break;
-    case "JPY":
-      result = ammount / rateJPY;
-      break;
-    case "QAR":
-      result = ammount / rateQAR;
-      break;
-    case "GBP":
-      result = ammount / rateGBP;
-  }
+      case "GBP":
+        return amount / rateGBP;
+    }
+  };
 
-  formResult.innerText = `${ammount} PLN = ${result.toFixed(2)} ${currency}`;
-});
+  const updateResult = (amount, result, currency) => {
+    const formResult = document.querySelector(".js-result");
+    formResult.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
+  };
+
+  const onEventSubmit = (event) => {
+    event.preventDefault();
+
+    const amountElement = document.querySelector(".js-amount");
+    const currencyElement = document.querySelector(".js-currency");
+
+    const amount = amountElement.value;
+    const currency = currencyElement.value;
+
+    const result = exchangedAmount(amount, currency);
+
+    updateResult(amount, result, currency);
+  };
+
+  const init = () => {
+    const formElement = document.querySelector(".js-form");
+
+    formElement.addEventListener("submit", onEventSubmit);
+  };
+
+  init();
+}
