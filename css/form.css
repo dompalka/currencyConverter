@@ -52,6 +52,7 @@
   font-size: large;
   box-shadow: 7px 7px 5px #313232;
   cursor: pointer;
+  margin: 28px;
 }
 
 .form__button:hover {
