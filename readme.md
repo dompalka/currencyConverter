@@ -14,5 +14,7 @@ As part of the YouCode course I was tasked with creating a simple currency conve
 - HTML
 - CSS
 - JavaScript
+- ES6+
 - BEM
 - GIT
+- Flex
