@@ -1,12 +1,13 @@
 .result {
   border: 4px ridge #cecece;
   margin: 24px auto;
-  width: 80%;
+  width: 82%;
   text-align: center;
   border-radius: 12px;
   box-shadow: 7px 7px 5px #313232;
   text-shadow: 7px 7px 5px #313232;
   font-size: x-large;
+  background-color: #0000005e;
 }
 
 .result__text {

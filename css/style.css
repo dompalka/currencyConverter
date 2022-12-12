@@ -9,11 +9,10 @@ html {
 
 .body {
   font-family: "Noticia Text", serif;
-  color: #eee;
+  color: #fff;
 }
 
 .background__image {
-  background-color: #eee;
   background-image: url("../images/backgroung.jpg");
   background-size: cover;
   background-position: center;
