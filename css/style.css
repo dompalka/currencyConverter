@@ -10,6 +10,7 @@ html {
 .body {
   font-family: "Noticia Text", serif;
   color: #fff;
+  min-height: 100vh;
 }
 
 .background__image {
