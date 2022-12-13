@@ -31,35 +31,38 @@
   </head>
 
   <body class="body background__image flex">
-    <header><h1 class="header">Currency Converter</h1></header>
+    <header>
+      <h1 class="header">Currency Converter</h1>
+    </header>
     <main>
       <div>
         <form class="form js-form">
           <fieldset class="form__fieldset">
             <legend class="form__legend">Currency rates from 02.12</legend>
             <p>
-              <label
-                ><span class="form__label">Amount:*</span
-                ><input
+              <label>
+                <span class="form__label">Amount:*</span>
+                <input
                   type="number"
                   class="form__field js-amount"
                   placeholder="In PLN"
                   required
                   min="0.01"
                   step="0.01"
-              /></label>
+                />
+              </label>
             </p>
             <p>
-              <label
-                ><span class="form__label">Selected Currency:</span
-                ><select class="form__field js-currency" name="currencyList">
+              <label>
+                <span class="form__label">Selected Currency:</span>
+                <select class="form__field js-currency" name="currencyList">
                   <option value="EUR">EUR</option>
                   <option value="GBP">GBP</option>
                   <option value="JPY">JPY</option>
                   <option value="USD">USD</option>
                   <option value="QAR">QAR</option>
-                </select></label
-              >
+                </select>
+              </label>
             </p>
             <p>* - Required field.</p>
           </fieldset>
@@ -68,8 +71,8 @@
       </div>
       <div class="result">
         <p>
-          <span class="result__text">Converted Ammount:</span
-          ><strong class="js-result"></strong>
+          <span class="result__text">Converted Ammount:</span>
+          <strong class="js-result"></strong>
         </p>
       </div>
     </main>
